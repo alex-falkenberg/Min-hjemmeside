@@ -2,9 +2,33 @@
     box-sizing: border-box;
 }
 
+header {
+    background: #1F3A5F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
 
-:root {
-    --primary-color:
+header nav {
+    background: none;
+    padding-block: 0;
+}
+
+.Logo {
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 #title {
@@ -18,11 +42,42 @@
 
 #title2 {
     text-align: center;
+    font-family: sans-serif;
+    background: linear-gradient(90deg, rgba(2, 0, 36, 0.45) 0%, rgba(9, 9, 121, 0.64) 35%, rgba(0, 212, 255, 1) 100%);
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .intro {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .intro-text p {
+        text-align: left;
+    }
+
+    .profile-pic {
+        align-self: flex-start;
+    }
 }
 
 body {
-    background-color: #F6F1D1;
-    border: 5px solid;
+    font-family: sans-serif;
+    color: white;
+    background-color: #55569D;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -45,6 +100,7 @@ nav li {
 }
 
 nav a {
+    display: inline-block;
     text-decoration: none;
     color: white;
     padding: 1rem;
@@ -55,36 +111,105 @@ nav a:hover {
 }
 
 nav a.active {
-    background: #599BB1;
+    background: #4A90D9;
 }
 
-img {
+.profile-pic {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 150px;
+    height: auto;
+    margin: 0;
     border-radius: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+    .profile-pic {
+        width: 200px;
+    }
 }
 
 p {
     font-family: sans-serif;
-    font-weight: bold;
     text-align: center;
 }
 
-#title2 {
-    font-family: sans-serif;
-    background: #020024;
-    background: linear-gradient(90deg, rgba(2, 0, 36, 0.45) 0%, rgba(9, 9, 121, 0.64) 35%, rgba(0, 212, 255, 1) 100%);
+.home-text p {
+    font-weight: bold;
+}
+
+footer {
+    background: #1F3A5F;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .footer-nav {
     text-align: center;
     font-family: sans-serif;
     font-weight: bold;
-    background: #70A9A1;
     padding-block: 1rem;
+    background: #1F3A5F;
+}
+
+.footer-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .footer-nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+footer p {
+    color: white;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.cv-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.cv-box {
+    background: #1F3A5F;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.cv-box h2 {
+    margin-top: 0;
+}
+
+.cv-box p {
+    text-align: left;
+}
+
+@media (min-width: 768px) {
+    .cv-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 html {
     scroll-behavior: smooth;
+    overflow-y: scroll;
 }
