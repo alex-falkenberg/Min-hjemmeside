@@ -209,6 +209,43 @@ main {
     }
 }
 
+.profile-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 0.5;
+    margin-bottom: 1rem;
+}
+
+.cv-box a {
+    color: white;
+}
+
+.logo-img {
+    object-fit: contain;
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: 125%;
+    }
+
+    .profile-pic {
+        width: 280px;
+    }
+}
+
+@media (min-width: 2200px) {
+    html {
+        font-size: 150%;
+    }
+
+    .profile-pic {
+        width: 340px;
+    }
+}
+
 html {
     scroll-behavior: smooth;
     overflow-y: scroll;
